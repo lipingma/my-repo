@@ -1,0 +1,13 @@
+name: Default branch protection policy
+description: Requires one reviewer for merges into main branch
+
+resource: repository
+
+configuration:
+  branchProtectionRules:
+    - branchNamePattern: "main"
+      requiredApprovingReviewsCount: 1
+      isAdminEnforced: false
+      restrictsPushes: true
+      whoCanPush:
+      - microsoft-github-policy-service
